@@ -3,3 +3,114 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/*+ LAYOUT SECTION */
+
+.container{
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row{
+    display: flex;
+}
+
+.col{
+    margin-bottom: 2rem;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+
+/*+ UTILITY SECTION */
+
+.only-desktop{
+    display: none;
+}
+
+.h300{
+    height: 300px;
+}
+
+.h500{
+    height: 500px;
+}
+
+.bg-red{
+    background-color: red;
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-silver{
+    background-color: silver;
+}
+
+.card{
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/*+ HEADER SECTION */
+header{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*+ MAIN SECTION */
+ 
+    /*> jumbotron */
+#jumbotron .col{
+    width: 100%;
+}
+
+
+
+
+/*+ MEDIA SECTION */
+
+/* when bigger then phone size */
+@media screen and (min-width: 480px){
+    #jumbotron .col{
+        width: calc(100%/3 - 10px);
+        margin-right: 10px;
+    }
+    #jumbotron .col:first-child{
+        width: calc(200%/3 - 10px);
+    }
+}
+
+/* when bigger then tablet size */
+@media screen and (min-width: 768px){
+    .only-desktop{
+        display: block;
+    }
+
+    .hide-on-desktop{
+        display: none;
+    }
+
+    #jumbotron .col:first-child{
+        display: flex;
+    }
+    #jumbotron .col:first-child > div{
+        width: 50%;
+    }
+}
+
+/* END OF MEDIA SECTION */
