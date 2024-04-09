@@ -19,6 +19,11 @@
 
 .col{
     margin-bottom: 2rem;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
 }
 
 .space-between{
@@ -29,6 +34,9 @@
     flex-wrap: wrap;
 }
 
+.justify-right{
+    justify-content: right;
+}
 
 /*+ UTILITY SECTION */
 
@@ -68,17 +76,16 @@
 /*+ HEADER SECTION */
 header{
     padding: 10px;
-    margin-bottom: 20px;
 }
 
 
 /*+ MAIN SECTION */
- 
-    /*> jumbotron */
-#jumbotron .col{
-    width: 100%;
+main section{
+    padding: 15px;
 }
+    /*> jumbotron */
 
+    /*> planning */
 
 
 
@@ -86,19 +93,46 @@ header{
 
 /* when bigger then phone size */
 @media screen and (min-width: 480px){
+    /* jumbotron */
+    #jumbotron .row{
+        gap: 10px;
+    }
     #jumbotron .col{
-        width: calc(100%/3 - 10px);
-        margin-right: 10px;
+        width: calc(100%/3 - (20px / 3) );
     }
     #jumbotron .col:first-child{
-        width: calc(200%/3 - 10px);
+        width: calc(200%/3 - 10px + (20px / 3));
+    }
+
+    /* testimonial */
+    #testimonials .col.card {
+        display: flex;
+    }
+    #testimonials .col.card div:first-child{
+        width: 30%;
+    }
+    #testimonials .col.card div:last-child{
+        width: 70%;
+    }
+
+    /* benefits */
+    #benefits .col{
+        width: calc(100%/2 - (10px / 2) );
+    }
+
+    /*  about-us */
+    #about-us .container{
+        display: flex;
+    }
+    #about-us .container > div{
+        width: 50%;
     }
 }
 
 /* when bigger then tablet size */
 @media screen and (min-width: 768px){
     .only-desktop{
-        display: block;
+        display: flex;
     }
 
     .hide-on-desktop{
@@ -110,6 +144,22 @@ header{
     }
     #jumbotron .col:first-child > div{
         width: 50%;
+    }
+
+    #planning .row{
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    #planning .col{
+        width: 50%;
+    }
+
+    /* benefits */
+    #benefits .row{
+        gap: 10px
+    }
+    #benefits .col{
+        width: calc(100%/3 - (20px / 3) );
     }
 }
 
