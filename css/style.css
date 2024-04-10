@@ -1,9 +1,22 @@
+/*+ RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*+ COMMON */
+:root{
+    --primary-color: #0084fd;
+    --primary-color-light: #b5ddff;
+    --secondary-color: #9792e4;
+}
+
+button{
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: none;
+}
 
 /*+ LAYOUT SECTION */
 
@@ -17,7 +30,7 @@
     display: flex;
 }
 
-.col{
+main .col{
     margin-bottom: 2rem;
     width: 100%;
 }
@@ -36,6 +49,10 @@
 
 .justify-right{
     justify-content: right;
+}
+
+.align-center{
+    align-items: center;
 }
 
 /*+ UTILITY SECTION */
@@ -73,9 +90,25 @@
     padding: 10px;
 }
 
+
 /*+ HEADER SECTION */
 header{
     padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    align-items: center;
+}
+header i{
+    font-size: 1.5rem;
+}
+header .col{
+    margin: 0;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 20px;
 }
 
 
