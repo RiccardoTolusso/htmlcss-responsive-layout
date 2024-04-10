@@ -13,10 +13,11 @@
 }
 
 button{
-    padding: 7px 14px;
+    padding: 0.4em 1em;
     border-radius: 20px;
     border: none;
 }
+
 
 /*+ LAYOUT SECTION */
 
@@ -85,15 +86,33 @@ main .col{
     background-color: silver;
 }
 
+.circle{
+    border-radius: 50%;
+}
+
+/*+ CARDS */
 .card{
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.card h3{
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+.card p{
+    padding: 20px 0;
+    line-height: 2;
+}
+.card button{
+    margin: 25px 0px;
+    font-size: 1.5rem;
 }
 
 
 /*+ HEADER SECTION */
 header{
-    padding: 10px;
+    padding: 10px 0;
     background-color: var(--primary-color);
     color: white;
     align-items: center;
@@ -114,12 +133,97 @@ header ul{
 
 /*+ MAIN SECTION */
 main section{
-    padding: 15px;
+    padding: 15px 0;
 }
     /*> jumbotron */
+#jumbotron img#phone{
+    width: 100%;
+    display: block;
+}
+#jumbotron .card{
+    background-color: var(--primary-color-light);
+}
+#jumbotron .card.big-card{
+    padding-bottom: 0;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+#jumbotron .card > i{
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+#jumbotron .card > i,
+#jumbotron .card h3{
+    color: var(--primary-color);
+}
+#jumbotron .card.big-card button{
+    background-color: var(--primary-color);
+    color: white;
+}
+
 
     /*> planning */
+#planning{
+    background-color: var(--secondary-color);
+    color: white;
+}
+#planning img{
+    width: 100%;
+}
+#planning h2{
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+#planning p{
+    line-height: 2;
+}
+#planning .card{
+    background-color: white;
+    color: black;
+}
+#planning .card i.circle{
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    font-size: 1.5rem;
+}
 
+    /*>  */
+section#testimonials{
+    text-align: center;
+}
+section#testimonials h3{
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+section#testimonials h2{
+    font-size: 2em;
+    padding-bottom: 40px;
+}
+section#testimonials p{
+    line-height: 2;
+    padding-bottom: 40px;
+}
+section#testimonials .card{
+    background-color: var(--secondary-color);
+    color: white;
+}
+section#testimonials .person-img{
+    width: 60vw;
+    height: 60vw;
+    margin: 0 auto;    
+    overflow: hidden;
+}
+section#testimonials .person-img img{
+    height: 100%;
+}
+section#testimonials .text{
+    padding: 1rem;
+}
+section#testimonials .text h3{
+    padding: 1rem 0 0 0;
+}
 
 
 /*+ MEDIA SECTION */
@@ -128,24 +232,33 @@ main section{
 @media screen and (min-width: 480px){
     /* jumbotron */
     #jumbotron .row{
-        gap: 10px;
+       margin: 0 -10px;
     }
-    #jumbotron .col{
-        width: calc(100%/3 - (20px / 3) );
+    #jumbotron .card{
+        margin: 10px;
+        width: calc(100%/3 - 20px);
     }
-    #jumbotron .col:first-child{
-        width: calc(200%/3 - 10px + (20px / 3));
+    #jumbotron .card.big-card{
+        width: calc(200%/3 - 20px );
     }
+    #jumbotron .card.big-card div:last-child{
+        width: 50%;
+        align-self: flex-end;
+    }
+
 
     /* testimonial */
     #testimonials .col.card {
         display: flex;
+        align-items: center;
     }
-    #testimonials .col.card div:first-child{
-        width: 30%;
+    #testimonials .col.card .person-img{
+        width: 25vw;
+        height: 25vw;
     }
-    #testimonials .col.card div:last-child{
-        width: 70%;
+    #testimonials .col.card .text{
+        width: calc(100% - 25vw);
+        text-align: left;
     }
 
     /* benefits */
