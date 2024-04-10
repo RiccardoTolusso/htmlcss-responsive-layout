@@ -116,6 +116,9 @@ main section{
     }
 
     /* benefits */
+    #benefits .row{
+        gap: 10px
+    }
     #benefits .col{
         width: calc(100%/2 - (10px / 2) );
     }
@@ -147,17 +150,19 @@ main section{
     }
 
     #planning .row{
-        flex-wrap: wrap;
-        align-items: flex-end;
+        justify-content: center;
+        gap: 20px;
     }
+
     #planning .col{
-        width: 50%;
+        width: calc(50% - 120px);
+    }
+
+    #planning .col.card{
+        align-self: flex-end;
     }
 
     /* benefits */
-    #benefits .row{
-        gap: 10px
-    }
     #benefits .col{
         width: calc(100%/3 - (20px / 3) );
     }
