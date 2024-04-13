@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
 }
 
 /*+ COMMON */
@@ -286,6 +287,61 @@ section#about-us .person button{
     color: white;
     margin: 1rem 0 3rem 0;
 }
+
+    /*> get-started section */
+section#get-started{
+    background-color: var(--secondary-color);
+}
+section#get-started .col{
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+section#get-started h3{
+    padding-top: 3rem;
+    font-weight: 100;
+}
+section#get-started h2{
+    font-size: 2rem;
+    padding-top: 1rem ;
+}
+section#get-started h1{
+    font-size: 4rem;
+    color: #ffa82e;
+    padding: 3rem;
+}
+section#get-started p{
+    max-width: 70%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+section#get-started button{
+    margin: 1.5rem 0;
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 1.2rem 4rem;
+    border-radius: 3rem;
+}
+section#get-started p a{
+    color: white;
+}
+footer{
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 0.9rem;
+    padding: 2rem 35%;
+    text-align: center;
+}
+footer p{
+    padding: 1rem 0;
+}
+footer p a{
+    color: var(--secondary-color);
+}
+
+
+
 /*+ MEDIA SECTION */
 
 /* when bigger then phone size */
