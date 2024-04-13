@@ -330,7 +330,7 @@ footer{
     background-color: #2d2d2d;
     color: white;
     font-size: 0.9rem;
-    padding: 2rem 35%;
+    padding: 2rem 15%;
     text-align: center;
 }
 footer p{
@@ -402,6 +402,10 @@ footer p a{
     #about-us .container div.person{
         width: calc(40% - 0.5rem);
     }
+
+    footer{
+        padding: 2rem 25%;
+    }
 }
 
 /* when bigger then tablet size */
@@ -437,6 +441,11 @@ footer p a{
     /* benefits */
     #benefits .col{
         width: calc(100%/3 - (20px / 3) );
+    }
+
+    
+    footer{
+        padding: 2rem 35%;
     }
     
 }
